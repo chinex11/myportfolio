@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ink Airdrop Checker — Case study | Obasi Kalu Uka (Urbankalu)</title>
+<meta name="description" content="Case study: Ink Airdrop Checker, an unofficial airdrop simulator for the Ink chain that scores a wallet from its public on-chain activity.">
+<meta name="theme-color" content="#14201a">
+<link rel="icon" href="../assets/img/urban-logo.png">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Urban — home"><img src="../assets/img/urban-logo.png" alt="Urban"></a>
+    <button class="menu-btn" aria-label="Menu">Menu</button>
+    <ul>
+      <li><a href="../index.html#work" class="active">Work</a></li>
+      <li><a href="../index.html#services">Services</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a class="btn btn-solid btn-sm" href="../index.html#contact" style="color:#fff">Hire me</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="cs-hero">
+  <div class="wrap">
+    <a class="back" href="../index.html#work">&larr; All work</a>
+    <span class="eyebrow">Case study &middot; Web3 tool</span>
+    <h1>Ink Airdrop Checker</h1>
+    <p class="lead">An unofficial airdrop simulator for the Ink chain. Paste a wallet address and it reads the wallet's public activity, then shows an estimated score, tier and token amount on a 1,000,000,000 supply.</p>
+    <div class="cta" style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
+      <a class="btn btn-solid" href="https://github.com/chinex11/Inkonchainairdropsimulator" target="_blank" rel="noopener">View source on GitHub</a>
+    </div>
+    <div class="facts-row">
+      <div><small>Role</small>Design &amp; development</div>
+      <div><small>Stack</small>JavaScript, Node serverless function</div>
+      <div><small>Hosting</small>Vercel, no build step</div>
+      <div><small>Privacy</small>No wallet connection, no signing</div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-body">
+  <div class="wrap">
+    <div class="frame">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <img src="../assets/img/ink-example.jpg" alt="Ink Airdrop Checker showing an example score breakdown" width="1440" height="1100">
+    </div>
+    <p class="shot-cap">Built-in example result &mdash; score breakdown on the left, estimated allocation and rankings on the right.</p>
+
+    <div class="cs-grid">
+      <div>
+        <h2>The idea</h2>
+        <p>The Ink Foundation has said an INK token airdrop is coming but has not published how points are calculated. This tool lets people explore what a points-style score could look like for their own wallet, and it states clearly on the page that every weight is an assumption.</p>
+      </div>
+      <div>
+        <h2>How it works</h2>
+        <ul>
+          <li><b>Reads public data only:</b> the Ink RPC and Blockscout explorer for transactions, active months, apps used, holdings and contracts deployed.</li>
+          <li><b>GM leaderboard:</b> reads the gm.ink leaderboard through a serverless function, because that site sends no CORS headers.</li>
+          <li><b>Transparent scoring:</b> a maximum of 78 points across wallet activity, Ink identity, Ink usage and GM, with editable tier tables.</li>
+          <li><b>Anti-farming rules:</b> the score is halved for wallets that look like farming, such as very high transaction counts across very few apps.</li>
+          <li><b>Rankings:</b> an exact GM rank and a verified-wallet rank refreshed daily by a GitHub Action, plus clearly labelled estimates for the rest.</li>
+          <li><b>Adjustable outcome:</b> a slider for the share of supply airdropped, so users can see how the estimate changes.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cs-grid">
+      <div>
+        <h2>The design</h2>
+        <p>A light, clean interface built around one job: paste an address and read the result. A plain-language disclaimer sits at the top, score rows show points earned against the maximum, and the layout stacks into a single column on phones.</p>
+      </div>
+      <div style="display:flex;justify-content:center">
+        <div style="width:min(300px,70%)">
+          <div class="phone"><img src="../assets/img/ink-example-mobile.jpg" alt="Ink Airdrop Checker on a phone" loading="lazy"></div>
+          <p class="shot-cap" style="text-align:center">Example result on mobile</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">Screenshots were rendered from the project's source code using its built-in example result. The checker is an estimate and is not affiliated with the Ink Foundation.</p>
+
+    <div class="cs-nav">
+      <a href="jakpa.html">&larr; Previous project<b>Jakpa</b></a>
+      <a href="../index.html#contact" style="text-align:right">Like what you see?<b>Start a project &rarr;</b></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap row">
+    <span>&copy; <span id="year">2026</span> Obasi Kalu Uka (Urbankalu) &middot; <a href="mailto:kaluobasi60@gmail.com">kaluobasi60@gmail.com</a> &middot; <a href="https://t.me/chinexcongle">Telegram</a></span>
+    <span>Benin City, Nigeria</span>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>
