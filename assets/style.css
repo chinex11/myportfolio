@@ -104,6 +104,10 @@ section { padding: 84px 0; }
 .tag { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 99px; background: rgba(140,185,60,0.16); color: #3d5d12; }
 .tag.dark { background: rgba(140,185,60,0.14); color: var(--sprout); }
 .arrow { font-weight: 700; color: var(--orange-dark); }
+.project a.arrow { text-decoration: none; }
+.project a.arrow:hover { text-decoration: underline; }
+.links { display: flex; gap: 22px; flex-wrap: wrap; }
+a.shot { display: block; }
 
 /* Services */
 .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
